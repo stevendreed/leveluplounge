@@ -11,28 +11,32 @@ class User extends Model {
 User.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      // autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [6,32],
+        unique: true
+      }
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         isEmail: true,
+        unique: true,
       },
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        is: /^[0-9a-f]{64}$/i // is only alphanumeric w/ 64 chars
       },
     },
   },
@@ -48,7 +52,7 @@ User.init(
       },
     },
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
