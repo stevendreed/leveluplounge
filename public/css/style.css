@@ -1,3 +1,23 @@
+.postTitleSection {
+  font-size: 2em;
+  text-align: center;
+  color: blue;
+  background-color: green;
+}
+
+.postTitle {
+  color: blue;
+}
+
+.postAuthor {
+  
+}
+
+.detector {
+  background-color: red;
+}
+
+/* TEMPLATE CODE */
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
