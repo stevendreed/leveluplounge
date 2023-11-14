@@ -6,6 +6,8 @@
   --contrast: #ebebec;
 }
 
+/* ----------- HOMEPAGE ----------- */
+
 .postCardEntire {
   border-radius: 20px;
   background-color: var(--primary)
@@ -61,6 +63,8 @@
 .detector {
   background-color: red;
 }
+
+/* ----------- HOMEPAGE ENDS ----------- */
 
 /* TEMPLATE CODE */
 header, .project:not(:last-child) {
