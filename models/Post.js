@@ -14,9 +14,15 @@ Post.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [8, 64]
+      }
     },
-    description: {
+    body: {
       type: DataTypes.STRING,
+      validate: {
+        len: [8, 1024]
+      }
     },
     // unneeded: added timestamps to table
     // date_created: {
@@ -24,9 +30,13 @@ Post.init(
     //   allowNull: false,
     //   defaultValue: DataTypes.NOW,
     // },
+    is_public: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    },
     user_upvotes: {
       type: DataTypes.ARRAY,
-      allowNull: true,
+      allowNull: true
     },
     user_downvotes:{
       type: DataTypes.ARRAY,

@@ -20,16 +20,16 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        min:6,
-        max: 32
+        len: [6,32],
+        unique: true
       }
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         isEmail: true,
+        unique: true,
       },
     },
     password: {
