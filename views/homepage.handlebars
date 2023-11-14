@@ -1,16 +1,20 @@
 <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
-<div class="col-md-12 detector">
+<div class="col-md-12 mb-5 postCardEntire">
   <div class="col-md-12">
     <h2 class="postTitleSection">
       <a class="postTitle" href="/project/{{project.id}}">{{project.name}}</a>
     </h2>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+    <div class="titleBorder"></div>
+    <p class="postAuthor">Created by {{project.user.name}} on {{format_date project.date_created}}</p>
   </div>
-    <p>
+    <p class="postDescription">
       {{project.description}}
     </p>
-</div>
-<div class="col-md-2 detector">
+  <div class="postVotes">
+    <button class="upvote">Dvote</button>
+    <p class="postVoteValue">{{project.needed_funding}}</p>
+    <button class="downvote">Uvote</button>
+  </div>
 </div>
 {{/each}}
