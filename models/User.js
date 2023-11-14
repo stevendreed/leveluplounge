@@ -14,11 +14,15 @@ User.init(
       type: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      // autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        min:6,
+        max: 32
+      }
     },
     email: {
       type: DataTypes.STRING,
@@ -32,7 +36,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        is: /^[0-9a-f]{64}$/i // is only alphanumeric w/ 64 chars
       },
     },
   },
@@ -48,7 +52,7 @@ User.init(
       },
     },
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
