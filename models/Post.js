@@ -6,12 +6,12 @@ class Post extends Model {}
 Post.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -23,12 +23,16 @@ Post.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
+    user_upvotes: {
+      type: DataTypes.ARRAY,
+      allowNull: true,
+    },
+    user_downvotes:{
+      type: DataTypes.ARRAY,
+      allowNull: true
     },
     user_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUIDV4,
       references: {
         model: 'user',
         key: 'id',
