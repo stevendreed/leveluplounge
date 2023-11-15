@@ -11,7 +11,7 @@
     "rules": {
         // error if no semi included
         "semi": [2, "always"], 
-        // warn on single quotes
+        // warn on double quotes
         "quotes": [1, "double"], 
         // error if function args repeat
         "no-dupe-args": [2], 
