@@ -35,14 +35,18 @@ Post.init(
       type: DataTypes.BOOLEAN,
       defaultValue: true
     },
-    user_upvotes: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: true
+    votes: {
+      type: DataTypes.INTEGER,
+      defaultValue: 1
     },
-    user_downvotes:{
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: true
-    },
+    // user_upvotes: {
+    //   type: DataTypes.JSONB,
+    //   allowNull: true
+    // },
+    // user_downvotes:{
+    //   type: DataTypes.JSONB,
+    //   allowNull: true
+    // },
     user_id: {
       type: DataTypes.UUID,
       defaultVault: DataTypes.UUIDV4,
