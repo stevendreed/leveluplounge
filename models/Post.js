@@ -35,11 +35,11 @@ Post.init(
       defaultValue: true
     },
     user_upvotes: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: true
     },
     user_downvotes:{
-      type: DataTypes.ARRAY,
+      type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: true
     },
     user_id: {
