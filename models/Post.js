@@ -6,7 +6,8 @@ class Post extends Model {}
 Post.init(
   {
     id: {
-      type: DataTypes.UUIDV4,
+      type: DataTypes.UUID,
+      defaultVault: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true,
       // autoIncrement: true,
@@ -43,7 +44,8 @@ Post.init(
       allowNull: true
     },
     user_id: {
-      type: DataTypes.UUIDV4,
+      type: DataTypes.UUID,
+      defaultVault: DataTypes.UUIDV4,
       references: {
         model: 'user',
         key: 'id',
