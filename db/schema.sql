@@ -1,3 +1,5 @@
+
 DROP DATABASE IF EXISTS lounge_db;
 
 CREATE DATABASE lounge_db;
+
