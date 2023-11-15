@@ -56,6 +56,7 @@
   color: var(--primary-darker);
   background-color: var(--contrast);
   width: 80px;
+  border-radius: 20px;
   margin: 0px 10px 15px 10px;
 }
 
