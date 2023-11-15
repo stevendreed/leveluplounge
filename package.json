@@ -1,8 +1,8 @@
 {
-  "name": "crowd-funding",
+  "name": "leveluplounge",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "a marketplace of ideas... gaming ideas",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
