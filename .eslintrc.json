@@ -8,29 +8,31 @@
     "es2017": true,
     "es2018": true
   },
-  "extends": ["prettier", "airbnb-base"], 
-  "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-        // error if no semi included
-        "semi": [2, "always"], 
-        // warn on double quotes
-        "quotes": [1, "double"], 
-        // error if function args repeat
-        "no-dupe-args": [2], 
-        // warns if imports are not succient
-        "no-duplicate-imports": [1, {"includeExports": true }],
-        // warns if code is unreachable
-        "no-unreachable": 1,
-        // prevent global declarations
-        "no-implicit-globals": 2,
-        // warns on inline comments
-        "no-inline-comments": 1,
-        // error when using var
-        "no-var": 2,
-        // warns if async does  not have an await
-        "require-await": 1
-    }
+  "rules": {
+    "no-undef-init": "error",
+    "no-duplicate-case": "error",
+    "no-empty": "error",
+    "no-extra-semi": "error",
+    "no-func-assign": "error",
+    "no-irregular-whitespace": "error",
+    "no-unreachable": "error",
+    "curly": "error",
+    "dot-notation": "error",
+    "eqeqeq": "error",
+    "no-empty-function": "error",
+    "no-multi-spaces": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-trailing-spaces": "error",
+    "default-case": "error",
+    "no-fallthrough": "error",
+    "no-unused-vars": "error",
+    "no-use-before-define": "error",
+    "no-redeclare": "error",
+    "brace-style": "error",
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "radix": "off"
+  },
+  "extends": ["prettier"]
 }
